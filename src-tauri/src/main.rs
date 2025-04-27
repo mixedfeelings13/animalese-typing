@@ -53,6 +53,16 @@ fn main() {
                                   let _ = app_handle.emit_to("main", "key-pressed", "space".to_string());
                                 }
 
+                                //Interrogación
+                                Keycode::Slash | Keycode::Minus => {
+                                  let pressed_keys = device_state.get_keys();
+                                  if pressed_keys.contains(&Keycode::LShift) || pressed_keys.contains(&Keycode::RShift) {
+                                    let _ = app_handle.emit_to("main", "key-pressed", "?".to_string());
+                                  } else {
+                                    let _ = app_handle.emit_to("main", "key-pressed", "symbol".to_string());
+                                  }
+                                }
+
                                 //Todos los demás símbolos
                                 other => {
                                   let symbol = format!("{:?}", other).to_lowercase();
