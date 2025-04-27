@@ -48,6 +48,11 @@ fn main() {
                                   let _ = app_handle.emit_to("main", "key-pressed", "backspace".to_string());
                                 }
 
+                                //enter
+                                Keycode::Enter => {
+                                  let _ = app_handle.emit_to("main", "key-pressed", "space".to_string());
+                                }
+
                                 //Todos los demás símbolos
                                 other => {
                                   let symbol = format!("{:?}", other).to_lowercase();
