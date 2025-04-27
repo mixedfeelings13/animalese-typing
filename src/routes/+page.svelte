@@ -1,14 +1,19 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { listen } from '@tauri-apps/api/event';
-  import { writable } from 'svelte/store';
+  import { get, writable } from 'svelte/store';
   import { volume } from '$lib/stores/volume';
+  import { isPaused } from '$lib/stores/isPaused';
+  import '../app.css';
 
   const selectedVoice = writable('masculine/smug');
 
   onMount(() => {
     async function setupListener() {
       const unlisten = await listen<string>('key-pressed', async (event) => {
+
+        if(get(isPaused)) return;
+
         const input = event.payload.toLowerCase();
         let filename = '';
 
@@ -57,6 +62,14 @@
 
 <main class="container">
   <h1>Animalese Typing 🎶</h1>
+
+  <button on:click={() => isPaused.update(v => !v)}>
+    {#if $isPaused}
+      Reanudar
+    {:else}
+      Pausar
+   {/if}
+  </button>
 
   <label for="voiceSelect">Selecciona personalidad:</label>
   <select id="voiceSelect" bind:value={$selectedVoice}>
