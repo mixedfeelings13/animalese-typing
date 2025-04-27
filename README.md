@@ -49,7 +49,6 @@
 Requisitos:
 - Rust (stable) + target `x86_64-pc-windows-msvc`
 - Visual Studio Build Tools (C++ workload)
-- ImageMagick (opcional para PNG→ICO)
 
 Pasos:
 ```bash
@@ -65,9 +64,6 @@ src-tauri/target/release/bundle/windows/AnimaleseTyping-<version>-x86_64.exe
 
 ## Configuración
 
-- **Iconos**:
-  - `src-tauri/icons/icon.ico`: Icono para el exe de Windows.
-  - `src-tauri/icons/tray-icon.png`: Icono para la bandeja.
 - **Sonidos**: Carpeta `public/sounds/{common,masculine/*,feminine/*}` con archivos `.wav`.
 
 ---
