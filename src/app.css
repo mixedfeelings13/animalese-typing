@@ -1,10 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   @apply bg-green-50 text-gray-800 font-sans;
-  background-image: url('/patterns/leaves.svg');
+  background-image: url('/patterns/leaves.png');
   background-size: 200px;
   background-repeat: repeat;
 }
@@ -21,10 +19,31 @@ h1, h2, h3 {
   @apply font-bold text-green-700;
 }
 
-input, select {
-  @apply border-2 border-green-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-400;
-}
 
 .range-slider {
   @apply w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer;
+}
+
+/* Estilos de botones Animal Crossing */
+.button-bubble {
+  @apply bg-green-300 text-white font-bold rounded-full px-6 py-3 shadow-md transition hover:bg-green-400 active:bg-green-500 transform active:scale-95;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+}
+
+.button-bubble-secondary {
+  @apply bg-yellow-300 text-white font-bold rounded-full px-6 py-3 shadow-md transition hover:bg-yellow-400 active:bg-yellow-500 transform active:scale-95;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+}
+
+/* Pequeño borde blanco como en botones de AC */
+.button-bubble::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 9999px;
+  border: 2px solid white;
+  pointer-events: none;
 }
