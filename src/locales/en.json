@@ -1,0 +1,25 @@
+{
+  "typingTitle": "Animalese typing",
+  "pause": "Pause",
+  "resume": "Resume",
+  "voiceDropdown": {
+    "label": "Select personality:",
+    "group": {
+      "masculine": "Masculine",
+      "feminine": "Feminine"
+    },
+    "masculine": {
+      "smug": "Smug",
+      "lazy": "Lazy",
+      "jock": "Jock",
+      "cranky": "Cranky"
+    },
+    "feminine": {
+      "snooty": "Snooty",
+      "sisterly": "Sisterly",
+      "peppy": "Peppy",
+      "normal": "Normal"
+    }
+  },
+  "footer": { "text": "Made by pxmpxmpurin" }
+}

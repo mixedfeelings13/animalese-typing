@@ -79,15 +79,15 @@
       <label for="voiceSelect" class="block mb-2 text-green-900 font-semibold">Selecciona personalidad:</label>
       <select id="voiceSelect" class="w-full bg-green-100 text-[#22543D] rounded-lg px-3 py-2 border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-400" bind:value={$selectedVoice}>
         <optgroup label="Masculino">
-          <option value="masculine/smug">Smug</option>
-          <option value="masculine/lazy">Lazy</option>
-          <option value="masculine/jock">Jock</option>
-          <option value="masculine/cranky">Cranky</option>
+          <option value="masculine/smug">Engreído</option>
+          <option value="masculine/lazy">Perezoso</option>
+          <option value="masculine/jock">Deportista</option>
+          <option value="masculine/cranky">Gruñón</option>
         </optgroup>
         <optgroup label="Femenino">
-          <option value="feminine/snooty">Snooty</option>
-          <option value="feminine/sisterly">Sisterly</option>
-          <option value="feminine/peppy">Peppy</option>
+          <option value="feminine/snooty">Engreída</option>
+          <option value="feminine/sisterly">Cariñosa</option>
+          <option value="feminine/peppy">Animada</option>
           <option value="feminine/normal">Normal</option>
         </optgroup>
       </select>
@@ -115,7 +115,17 @@
       "
       />    
       <p class="text-green-900 mt-2">{Math.round($volume * 100)}%</p>
+     
     </div>
-
+    <footer>
+      <a
+        href="https://github.com/pxmpxmpurin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-green-900 hover:text-green-700 underline"
+      >
+        Hecho por pxmpxmpurin
+     </a>
+    </footer>
   </div>
 </div>
