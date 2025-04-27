@@ -1,4 +1,5 @@
 <script lang="ts">
+  impo
   import { invoke } from "@tauri-apps/api/core";
 
   let name = $state("");
